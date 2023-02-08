@@ -1,5 +1,7 @@
 <script setup>
 import watchlist from './components/watchlist.vue';
+import Search from './components/Search.vue';
+
 
 
       const movies=[
@@ -47,7 +49,9 @@ import watchlist from './components/watchlist.vue';
 </script>
 
 <template>
-  <div class="container flex flex-row"> 
+  
+  <div>
+   <Search/>
    <watchlist :data="movies"/>
   
   </div>

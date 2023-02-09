@@ -1,17 +1,12 @@
-<script >
-export default{ 
-    props: {
-        data:{type: Array}
-     }
-    }
- 
+<script setup>
+defineProps({
+    data:{type:Array, required:true}
+})
 </script>
 
 <template>
- <div class="w-full" > 
-    <ul>
-        <li v-for=" name in data" :key="name.id">{{ name.id }} -{{ name.name }} -{{ name.url }}-{{ name.description }}-{{ name.cover }}</li>
-    </ul>
- </div>
+    <!--<ul>
+        <li class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700" v-for=" title in dat" :key="title.index">{{ title.id }} -{{ title.name }} -{{ title.cover }}</li>
+    </ul>-->
 
 </template>

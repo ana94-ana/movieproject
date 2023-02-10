@@ -1,9 +1,7 @@
 <script setup>
 import Movies from "./components/Movies.vue"
 import Search from './components/Search.vue'
-import watchlist from './components/WatchS.vue'
-import { useStore } from 'vuex'
-import ListTitle from "./components/ListTitle.vue"
+import WatchS from './components/WatchS.vue'
 
 
 
@@ -14,6 +12,6 @@ import ListTitle from "./components/ListTitle.vue"
   <div>
    <Search/>
    <Movies />
-   <watchlist />
+  <WatchS/>
   </div>
 </template>

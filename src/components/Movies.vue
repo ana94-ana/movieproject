@@ -1,20 +1,21 @@
 <script setup >
 import { useStore } from 'vuex'
 import ListTitle from './ListTitle.vue'
-import MovieList from './MovieList.vue'
-import Watchlist from './watchlist.vue';
+import MoviesLIst from './MoviesLIst.vue';
+
  
 const store=useStore()
 
-const title=store.state.movie.data
-const moviesData=store.movie.data
+const title=store.state.movie.name
+const moviesData=store.state.movie.data
  
 </script>
 
 <template>
  <div class="w-full">
-    <MovieList :data="store.state.movie"/>
-    <Watchlist/>
+   <ListTitle :title="title"/>
+    <MoviesLIst :data="moviesData"/>
+    
 
  </div>
 

@@ -6,9 +6,10 @@ import './assets/main.css'
 const store=createStore({
     state(){
         return {
-            movie:{
-                action:true,
-               data: [
+         movie:{
+         name:" search",
+         action:true,
+         data: [
                 
                 {
                     id: 1,
@@ -50,26 +51,39 @@ const store=createStore({
               ]
         }
     }
+    
    
     },
-    watch:{
-        action:false,
-    data:[
-        
-    ]
-},
+    
+       
+   watch:{
+    name:" WatchList",
+    action:false,
+    data: [ 
+        {
+            id: 1,
+             name: "★ ტოპ ფაქტები ★", 
+             url:"https://www.youtube.com/watch?v=Mra2YR_wWXA", 
+             description:"ვიდეოში გაგაცნობთ ყველაზე ჭკვიანი ცხოველებს მსოფლიოში" ,
+             cover:" http://kabisashvili.blogspot.com/p/cxovelebi.html "
+        }
+    ]},
 mutations:{
-    addItemVideo(state,payload){
+    addWatch(state,payload){
         let video=state.video.data.find(item => item.id == payload)
         state.video.data.splice(state.video.data.indexOf(video),1)
         state.watch.data.push(video) 
     },
-    removeItemWatch(state,payload){
+    removevideo(state,payload){
         let video=state.watch.data.find(item => item.id == payload)
         state.watch.data.splice(state.watch.data.indexOf(watch),1)
         state.watch.data.push(watch) 
     }
 }
+
+    
+
+
 
     
     /*getters:{
